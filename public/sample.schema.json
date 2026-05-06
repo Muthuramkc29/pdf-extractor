@@ -3,16 +3,6 @@
   "pages": 1,
   "fields": [
     {
-      "id": "postOffice",
-      "label": "Post Office",
-      "type": "text",
-      "group": "Office Details",
-      "value": "Delhi GPO",
-      "required": true,
-      "page": 1,
-      "bbox": { "x": 0.16, "y": 0.187, "width": 0.32, "height": 0.022 }
-    },
-    {
       "id": "applicationDate",
       "label": "Date (dd/mm/yyyy)",
       "type": "date",
@@ -20,7 +10,88 @@
       "value": "01/08/19",
       "required": true,
       "page": 1,
-      "bbox": { "x": 0.66, "y": 0.187, "width": 0.20, "height": 0.022 }
+      "bbox": {
+        "x": 0.650,
+        "y": 0.198,
+        "width": 0.25,
+        "height": 0.02
+      }
+    },
+    {
+      "id": "firstName",
+      "label": "First Name",
+      "type": "text",
+      "group": "Applicant's Name",
+      "value": "RJ Kultheep",
+      "required": true,
+      "page": 1,
+      "bbox": {
+        "x": 0.290,
+        "y": 0.282,
+        "width": 0.60,
+        "height": 0.021
+      }
+    },
+    {
+      "id": "atmCardFor",
+      "label": "ATM Card required for",
+      "type": "select",
+      "group": "Account Settings",
+      "value": "Self",
+      "required": true,
+      "options": ["Self", "Joint \"B\" Account Holder", "Not Needed"],
+      "page": 1,
+      "bbox": {
+        "x": 0.12,
+        "y": 0.37,
+        "width": 0.78,
+        "height": 0.037
+      }
+    },
+    {
+      "id": "mobileNumber",
+      "label": "Mobile Number",
+      "type": "number",
+      "group": "Personal Details",
+      "value": 6378951260,
+      "required": true,
+      "validation": {
+        "min": 1000000000,
+        "max": 9999999999
+      },
+      "page": 1,
+      "bbox": {
+        "x": 0.350,
+        "y": 0.435,
+        "width": 0.18,
+        "height": 0.026
+      }
+    },
+    {
+      "id": "requestNetAndMobile",
+      "label": "Internet Banking and Mobile Banking",
+      "type": "checkbox",
+      "group": "Service Requests",
+      "value": true,
+      "page": 1,
+      "bbox": {
+        "x": 0.740,
+        "y": 0.780,
+        "width": 0.16,
+        "height": 0.026
+      }
+    }
+  ],
+  "_archived": [
+    {
+      "id": "postOffice",
+      "label": "Post Office",
+      "type": "text",
+      "group": "Office Details",
+      "value": "Delhi GPO",
+      "required": true,
+      "page": 1,
+      "bbox": { "x": 0.172, "y": 0.193, "width": 0.32, "height": 0.023 }
     },
     {
       "id": "cifId",
@@ -31,7 +102,7 @@
       "required": true,
       "validation": { "pattern": "^[A-Z0-9 ]{6,16}$" },
       "page": 1,
-      "bbox": { "x": 0.16, "y": 0.214, "width": 0.31, "height": 0.026 }
+      "bbox": { "x": 0.172, "y": 0.218, "width": 0.31, "height": 0.028 }
     },
     {
       "id": "primaryAccountId",
@@ -41,17 +112,7 @@
       "value": "445831254 8",
       "required": true,
       "page": 1,
-      "bbox": { "x": 0.605, "y": 0.214, "width": 0.30, "height": 0.026 }
-    },
-    {
-      "id": "firstName",
-      "label": "First Name",
-      "type": "text",
-      "group": "Applicant's Name",
-      "value": "RJ Kultheep",
-      "required": true,
-      "page": 1,
-      "bbox": { "x": 0.215, "y": 0.281, "width": 0.69, "height": 0.024 }
+      "bbox": { "x": 0.580, "y": 0.218, "width": 0.32, "height": 0.028 }
     },
     {
       "id": "middleName",
@@ -60,7 +121,7 @@
       "group": "Applicant's Name",
       "value": "",
       "page": 1,
-      "bbox": { "x": 0.215, "y": 0.306, "width": 0.69, "height": 0.024 }
+      "bbox": { "x": 0.227, "y": 0.307, "width": 0.69, "height": 0.026 }
     },
     {
       "id": "lastName",
@@ -70,29 +131,7 @@
       "value": "",
       "required": true,
       "page": 1,
-      "bbox": { "x": 0.215, "y": 0.331, "width": 0.69, "height": 0.024 }
-    },
-    {
-      "id": "atmCardFor",
-      "label": "ATM Card required for",
-      "type": "select",
-      "group": "ATM Card Required For",
-      "value": "Self",
-      "required": true,
-      "options": ["Self", "Joint \"B\" Account Holder", "Not Needed"],
-      "page": 1,
-      "bbox": { "x": 0.05, "y": 0.388, "width": 0.85, "height": 0.034 }
-    },
-    {
-      "id": "mobileNumber",
-      "label": "Mobile Number",
-      "type": "number",
-      "group": "Personal Details",
-      "value": 6378951260,
-      "required": true,
-      "validation": { "min": 1000000000, "max": 9999999999 },
-      "page": 1,
-      "bbox": { "x": 0.235, "y": 0.486, "width": 0.32, "height": 0.024 }
+      "bbox": { "x": 0.227, "y": 0.328, "width": 0.69, "height": 0.026 }
     },
     {
       "id": "panNumber",
@@ -102,7 +141,7 @@
       "value": "FTF8512GM",
       "validation": { "pattern": "^[A-Z]{5}[0-9]{4}[A-Z]$" },
       "page": 1,
-      "bbox": { "x": 0.69, "y": 0.486, "width": 0.21, "height": 0.024 }
+      "bbox": { "x": 0.702, "y": 0.435, "width": 0.21, "height": 0.026 }
     },
     {
       "id": "email",
@@ -111,7 +150,7 @@
       "group": "Personal Details",
       "value": "kultheepri@gmail.com",
       "page": 1,
-      "bbox": { "x": 0.235, "y": 0.512, "width": 0.665, "height": 0.024 }
+      "bbox": { "x": 0.247, "y": 0.487, "width": 0.665, "height": 0.026 }
     },
     {
       "id": "dob",
@@ -121,7 +160,7 @@
       "value": "06/03/1976",
       "required": true,
       "page": 1,
-      "bbox": { "x": 0.235, "y": 0.538, "width": 0.32, "height": 0.024 }
+      "bbox": { "x": 0.247, "y": 0.508, "width": 0.32, "height": 0.026 }
     },
     {
       "id": "mothersMaidenName",
@@ -130,108 +169,99 @@
       "group": "Personal Details",
       "value": "Rejina",
       "page": 1,
-      "bbox": { "x": 0.69, "y": 0.538, "width": 0.21, "height": 0.024 }
+      "bbox": { "x": 0.702, "y": 0.508, "width": 0.21, "height": 0.026 }
     },
     {
       "id": "requestInstantAtm",
       "label": "Instant ATM Card",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": false,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.685, "width": 0.16, "height": 0.025 }
+      "bbox": { "x": 0.792, "y": 0.626, "width": 0.16, "height": 0.026 }
     },
     {
       "id": "requestNewPersonalized",
       "label": "New Personalized ATM Card request",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": false,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.71, "width": 0.16, "height": 0.024 }
+      "bbox": { "x": 0.792, "y": 0.646, "width": 0.16, "height": 0.026 }
     },
     {
       "id": "requestReplacementPersonalized",
       "label": "Replacement Personalized ATM Card",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": false,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.736, "width": 0.16, "height": 0.024 }
+      "bbox": { "x": 0.792, "y": 0.667, "width": 0.16, "height": 0.026 }
     },
     {
       "id": "nameOnCard",
       "label": "Name to be printed on the card",
       "type": "text",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": "",
       "validation": { "maxLength": 21 },
       "page": 1,
-      "bbox": { "x": 0.18, "y": 0.748, "width": 0.585, "height": 0.022 }
+      "bbox": { "x": 0.192, "y": 0.677, "width": 0.585, "height": 0.023 }
     },
     {
       "id": "requestReplacementInstant",
       "label": "Replacement with Instant ATM card",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": false,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.778, "width": 0.16, "height": 0.025 }
+      "bbox": { "x": 0.792, "y": 0.702, "width": 0.16, "height": 0.026 }
     },
     {
       "id": "requestPinReissue",
       "label": "ATM card PIN request",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": false,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.804, "width": 0.16, "height": 0.024 }
+      "bbox": { "x": 0.792, "y": 0.723, "width": 0.16, "height": 0.026 }
     },
     {
       "id": "requestHotlist",
       "label": "ATM card hot-listing / closure",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": false,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.83, "width": 0.16, "height": 0.034 }
+      "bbox": { "x": 0.792, "y": 0.743, "width": 0.16, "height": 0.037 }
     },
     {
       "id": "hotlistLast4",
       "label": "Last 4 digits of card (closure only)",
       "type": "text",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": "",
       "validation": { "pattern": "^\\d{4}$|^$" },
       "page": 1,
-      "bbox": { "x": 0.55, "y": 0.842, "width": 0.21, "height": 0.022 }
-    },
-    {
-      "id": "requestNetAndMobile",
-      "label": "Internet Banking and Mobile Banking",
-      "type": "checkbox",
-      "group": "Request Type",
-      "value": true,
-      "page": 1,
-      "bbox": { "x": 0.78, "y": 0.866, "width": 0.16, "height": 0.024 }
+      "bbox": { "x": 0.562, "y": 0.753, "width": 0.21, "height": 0.023 }
     },
     {
       "id": "requestNetBanking",
       "label": "Internet Banking",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": true,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.892, "width": 0.16, "height": 0.024 }
+      "bbox": { "x": 0.792, "y": 0.794, "width": 0.16, "height": 0.026 }
     },
     {
       "id": "requestSmsBanking",
       "label": "SMS Banking",
       "type": "checkbox",
-      "group": "Request Type",
+      "group": "Service Requests",
       "value": false,
       "page": 1,
-      "bbox": { "x": 0.78, "y": 0.918, "width": 0.16, "height": 0.024 }
+      "bbox": { "x": 0.792, "y": 0.815, "width": 0.16, "height": 0.026 }
     },
     {
       "id": "linkedAccount1",
@@ -240,7 +270,7 @@
       "group": "Linked Accounts",
       "value": "",
       "page": 1,
-      "bbox": { "x": 0.61, "y": 0.94, "width": 0.32, "height": 0.022 }
+      "bbox": { "x": 0.622, "y": 0.833, "width": 0.32, "height": 0.023 }
     },
     {
       "id": "linkedAccount2",
@@ -249,7 +279,7 @@
       "group": "Linked Accounts",
       "value": "",
       "page": 1,
-      "bbox": { "x": 0.61, "y": 0.962, "width": 0.32, "height": 0.022 }
+      "bbox": { "x": 0.622, "y": 0.85, "width": 0.32, "height": 0.023 }
     },
     {
       "id": "additionalNotes",
@@ -258,7 +288,7 @@
       "group": "Linked Accounts",
       "value": "",
       "page": 1,
-      "bbox": { "x": 0.05, "y": 0.985, "width": 0.9, "height": 0.012 }
+      "bbox": { "x": 0.062, "y": 0.86, "width": 0.9, "height": 0.013 }
     }
   ]
 }

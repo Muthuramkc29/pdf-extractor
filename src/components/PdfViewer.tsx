@@ -122,6 +122,16 @@ export function PdfViewer({ pdfUrl }: Props) {
                 ref={(el) => {
                   if (el) pageRefs.current.set(pageNum, el);
                 }}
+                onClick={(e) => {
+                  // Dev-only calibration helper: Alt-click anywhere on the PDF
+                  // to log normalized coordinates of that point.
+                  if (!e.altKey || !import.meta.env.DEV) return;
+                  const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
+                  const x = (e.clientX - r.left) / r.width;
+                  const y = (e.clientY - r.top) / r.height;
+                  // eslint-disable-next-line no-console
+                  console.log(`[calibrate] page ${pageNum}: { x: ${x.toFixed(3)}, y: ${y.toFixed(3)} }`);
+                }}
                 className="relative shadow-lg ring-1 ring-border/60"
               >
                 <Page
